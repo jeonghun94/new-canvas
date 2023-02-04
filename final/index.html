@@ -4,89 +4,218 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css" />
     <title>Document</title>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
-
   <body>
-    <canvas></canvas>
-    <div>
-      <input type="range" id="lineWidth" min="1" max="10" step="0.1" />
-      <input type="color" id="color" />
+    <header>
+      <div class="header__left">
+        <p>catch</p>
+        <p>mind</p>
+      </div>
+      <div class="header__middle">
+        <div class="header__button">게임아이템</div>
+        <div class="header__button">화면저장</div>
+        <div class="header__button">대기실초대</div>
+        <div class="header__button">풀스크린</div>
+      </div>
+      <div class="header_right">나가기</div>
+    </header>
+    <div class="header__line">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-    <div class="color-box">
-      <div
-        class="color-option"
-        style="background-color: #1abc9c"
-        data-color="#1abc9c"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #3498db"
-        data-color="#3498db"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #34495e"
-        data-color="#34495e"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #27ae60"
-        data-color="#27ae60"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #8e44ad"
-        data-color="#8e44ad"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #f1c40f"
-        data-color="#f1c40f"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #e74c3c"
-        data-color="#e74c3c"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #95a5a6"
-        data-color="#95a5a6"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #d35400"
-        data-color="#d35400"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #bdc3c7"
-        data-color="#bdc3c7"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #2ecc71"
-        data-color="#2ecc71"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #e67e22"
-        data-color="#e67e22"
-      ></div>
+    <div class="header__bottom">
+      <p>한글 단어 version</p>
     </div>
-    <button id="mode">Fill</button>
-    <br />
-    <div>
-      <button id="clear">Clear</button>
-      <button id="eraser">Eraser</button>
-    </div>
-    <div>
-      <input type="file" accept="image/*" id="file" />
-      <input type="text" id="text" placeholder="Wite and then double click" />
-      <button id="save">Save image</button>
-    </div>
-    <script src="./src/app.js"></script>
+    <main>
+      <div class="main__content">
+        <!-- 아이템 요소 -->
+        <div class="user__content">
+          <div class="user__container">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+          <div class="user__container">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+          <div class="user__container">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+          <div class="user__container">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+        </div>
+        <!-- 캔버스요소 -->
+        <div class="canvas__content">
+          <div class="canvas__header">
+            현재 대기중 입니다. 3명 이상이 되면 시작합니다
+          </div>
+
+          <div class="canvas__container">
+            <p>PAINT BOARD</p>
+            <canvas></canvas>
+            <div class="canvas__container-setting">
+              <div class="canvas__container-colors">
+                <div
+                  class="color-option"
+                  style="background-color: #1abc9c"
+                  data-color="#1abc9c"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #d2ed57"
+                  data-color="#3498db"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #34495e"
+                  data-color="#34495e"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #27ae60"
+                  data-color="#27ae60"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #8e44ad"
+                  data-color="#8e44ad"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #f1c40f"
+                  data-color="#f1c40f"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #e74c3c"
+                  data-color="#e74c3c"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #95a5a6"
+                  data-color="#95a5a6"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #d35400"
+                  data-color="#d35400"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #bdc3c7"
+                  data-color="#bdc3c7"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #2ecc71"
+                  data-color="#2ecc71"
+                ></div>
+                <div
+                  class="color-option"
+                  style="background-color: #e67e22"
+                  data-color="#e67e22"
+                ></div>
+              </div>
+              <div class="canvas__container-button"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 아이템 요소 -->
+        <div class="user__content">
+          <div class="user__container reverse">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+          <div class="user__container reverse">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+          <div class="user__container reverse">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+          <div class="user__container reverse">
+            <div class="user__container-info">
+              <div class="user__container-info__header">NickName</div>
+              <div class="user__container-info__name"></div>
+              <div class="user__container-info__grade"></div>
+              <div class="user__container-info__score"></div>
+            </div>
+            <div class="user__container-img"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>캐치 전광판</div>
+      <div>
+        <p>
+          <span>팔레트</span> 게임아이템이 출시되었습니다. 게임아이템 버튼 클릭
+          해보세요 ♡
+        </p>
+      </div>
+      <div>www.nomadcoders.co</div>
+    </footer>
   </body>
 </html>
