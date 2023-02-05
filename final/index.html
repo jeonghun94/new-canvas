@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>캐치마인드</title>
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
@@ -15,12 +15,14 @@
         <p>mind</p>
       </div>
       <div class="header__middle">
-        <div class="header__button">게임아이템</div>
-        <div class="header__button">화면저장</div>
-        <div class="header__button">대기실초대</div>
-        <div class="header__button">풀스크린</div>
+        <div class="header__button blue">게임아이템</div>
+        <div class="header__button purple">화면저장</div>
+        <div class="header__button yellow">대기실초대</div>
+        <div class="header__button skyblue">풀스크린</div>
       </div>
-      <div class="header_right">나가기</div>
+      <div class="header__right">
+        <div class="header__button pink">나가기</div>
+      </div>
     </header>
     <div class="header__line">
       <div></div>
@@ -55,12 +57,15 @@
         <div class="user__content">
           <div class="user__container">
             <div class="user__container-info">
-              <div class="user__container-info__header">NickName</div>
-              <div class="user__container-info__name"></div>
-              <div class="user__container-info__grade"></div>
-              <div class="user__container-info__score"></div>
+              <div class="user__container-info__header reader">RoomLeader</div>
+              <div class="user__container-info__name reader-border">jhun</div>
+              <div class="user__container-info__grade reader-border">A</div>
+              <div class="user__container-info__score reader-border">
+                <p>정답</p>
+                <p>3</p>
+              </div>
             </div>
-            <div class="user__container-img"></div>
+            <div class="user__container-img reader-border">🤡</div>
           </div>
           <div class="user__container">
             <div class="user__container-info">
@@ -162,7 +167,21 @@
                   data-color="#e67e22"
                 ></div>
               </div>
-              <div class="canvas__container-button"></div>
+              <div class="canvas__container-button-box">
+                <div class="setting__container">
+                  <div class="setting__container-etc">
+                    <input type="text" id="text" />
+                    <input type="file" accept="image/*" id="file" />
+                  </div>
+                  <div class="canvas__container-button">
+                    <button>전체지우기</button>
+                    <button>지우개</button>
+                    <button>채우기</button>
+                    <button>저장</button>
+                    <input type="range" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
