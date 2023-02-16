@@ -421,6 +421,8 @@ main {
 .user__container-img {
   height: 100%;
   font-size: 5rem;
+  padding-top: 15px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
